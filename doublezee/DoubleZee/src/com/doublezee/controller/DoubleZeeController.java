@@ -75,6 +75,7 @@ public class DoubleZeeController {
         if (reCaptchaResponse.isValid()) {
         	enquiry.setResponse("Answer was entered correctly..!");
             if (enquiry != null){
+            	enquiry.setEmployeeId(0);
             	doubleZeeManager.createEnquiry(enquiry);
             }
        	} else {
@@ -107,6 +108,7 @@ public class DoubleZeeController {
         if (reCaptchaResponse.isValid()) {
             feedback.setResponse("Answer was entered correctly..!");
             if (feedback != null){
+            	feedback.setEmployeeId(0);
             	doubleZeeManager.createFeedback(feedback);
             }
        	} else {
